@@ -1,0 +1,1 @@
+ mycw = give_crossword(answers)

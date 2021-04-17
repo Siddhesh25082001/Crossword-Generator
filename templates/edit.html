@@ -1,0 +1,27 @@
+<!-- This is 'edit.html': It is the edit - (Update/delete) page for updation and deletion purposes -->
+
+{% extends "layout.html" %}
+    
+    {% block body %}
+    
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card card-body">
+                    <form action="/edit/{{crossword.id}}" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="question" value="{{crossword.question}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="answer" value="{{crossword.answer}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Update
+                        </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    {% endblock %}

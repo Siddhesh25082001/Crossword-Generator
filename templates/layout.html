@@ -1,0 +1,227 @@
+<!-- This is 'layout.html': It is the base html which contains all the links and references to all required data -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CrossWord Generator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+
+    
+  </head>
+  <body>
+ 
+    <!------------- Header Navigation ------------->
+
+    <div>
+      <nav>
+
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+              <ion-icon class="bars" name="reorder-three"></ion-icon>
+          </label>
+
+          <label class="logo animate__animated animate__fadeIn">
+            <ion-icon class="brand" name="grid-sharp"></ion-icon>CrossWord Generator
+          </label>
+  
+          <ul>
+              <li><a class="active" href="#">Home</a></li>
+              <li><a class="active" href="#">About Us</a></li>
+              <button>Log In</button>
+              <button>Sign Up</button>
+          </ul>
+  
+      </nav>
+  </div>
+  <hr>
+ 
+    <div class="container pt-4">
+      {% block body %}
+      {% endblock %}
+    </div>
+
+    <div class="about">
+        <div class="left-about animate__animated animate__fadeInLeft animate__delay-5s">
+            <table class='crossword-slant table-about'>
+
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> C </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-3d"><b>  </b></td>  
+                    <td class="td-bg-color cell td-3d"><b> G </b></td>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td>  
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                </tr>
+        
+                <tr>
+                    <td class="td-bg-color cell td-3d"><b> P </b></td>
+                    <td class="td-bg-color cell td-3d"><b> R </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> O </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> J </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> E </b></td>
+                    <td class="td-bg-color cell td-3d"><b> C </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> T </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                </tr>
+        
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> O </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-bg-color cell td-3d"><b> B </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> N </b></td>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-3d"><b>  </b></td>  
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>🤔</b></td> 
+                    <td class="td-3d"><b>🖊️</b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                </tr>
+        
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> S </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-bg-color cell td-3d"><b> A </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> E </b></td>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-3d"><b> S </b></td>  
+                    <td class="td-3d"><b> O </b></td> 
+                    <td class="td-3d"><b> L </b></td> 
+                    <td class="td-3d"><b> V </b></td> 
+                    <td class="td-3d"><b> E </b></td> 
+                </tr>
+        
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> S </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-bg-color cell td-3d"><b> S </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> R </b></td>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-3d"><b>  </b></td>  
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                </tr>
+        
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> W </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> L </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> E </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> A </b></td>
+                    <td class="td-bg-color cell td-3d"><b> R </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> N </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> I </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> N </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> G </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                </tr>
+        
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> O </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-bg-color cell td-3d"><b> D </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> T </b></td>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-3d"><b>  </b></td>  
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> A </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                </tr>
+        
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> R </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> O </b></td>
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> D </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> B </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> M </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> S </b></td> 
+                </tr>
+        
+                <tr>
+                    <td class="td-3d"><b>  </b></td>
+                    <td class="td-bg-color cell td-3d"><b> D </b></td> 
+                    <td class="td-3d"><b> </b></td>
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> R </b></td>
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                    <td class="td-bg-color cell td-3d"><b> E </b></td> 
+                    <td class="td-3d"><b>  </b></td> 
+                </tr>
+        
+            </table>
+        </div>
+
+        <div class="right-about animate__animated animate__fadeInRight animate__delay-5s">
+            <h2 class='heading-about'>About</h2>
+            <p class='para-about'>A <b>CROSSWORD</b> is a word puzzle that usually takes the form of a square or a rectangular grid of white- and black-shaded squares. The game's goal is to fill the white squares with letters, forming words or phrases, by solving clues, which lead to the answers. In languages that are written left-to-right, the answer words and phrases are placed in the grid from left to right ("Across") and from top to bottom ("Down"). The shaded squares are used to separate the words or phrases.</p>
+        </div>
+    </div>
+  
+    <div class="creators">
+      <h4 class="foot-creators"> &copy; Copyright 2020 ~ NASA Solutions </h4>
+    </div>
+
+    <script>
+        const btnDelete= document.querySelectorAll('.btn-delete');
+        if(btnDelete) 
+        {
+            const btnArray = Array.from(btnDelete);
+            btnArray.forEach((btn) => 
+            {
+                btn.addEventListener('click', (e) => 
+                {
+                if(!confirm('Are you sure you want to delete it?'))
+                {
+                    e.preventDefault();
+                }
+                });
+            })
+        }
+        
+        $(document).ready(function() 
+        {
+            $('#example').DataTable(
+                {     
+                "aLengthMenu": [[3, 5, 10, 25, -1], [3, 5, 10, 25, "All"]],
+                    "iDisplayLength": 10
+                } 
+            );
+        } );
+    </script>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>    
+
+  </body>
+</html>

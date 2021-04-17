@@ -1,0 +1,99 @@
+<!-- This is 'index.html' : It is the main .html file of the project -->
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="form">
+        
+            <!-- <div class="row"><h3>Question-Answers</h3></div> -->
+            <div class="left">
+                <img src="/static/images/Form.png" alt="This is a Image" class="form-image">
+            </div>
+
+            <div class="right">
+                <h2 class='animate__animated animate__fadeInDown animate__delay-1s'>
+                    Enter Crossword puzzle content
+                </h2>
+                <p>See instructions below. Under 10 words is best.</p>
+
+                <!-- <label for="" class="title-label"><h3>Title</h3></label>
+                <input type="text" name="title" id="title" class="title-input"> -->
+                <input type="text" class="form-control title" name="question" placeholder="Enter Your Title" required>
+            </div>
+
+            <div>
+                <hr class="hr-after-image">
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    {% with messages = get_flashed_messages()  %}
+                        {% if messages %}
+                            {% for message in messages %}
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+
+                    <h2 class='animate__animated animate__fadeInLeft animate__delay-2s'>
+                        Append your Questions and Answers here.
+                        <ion-icon name="arrow-down-sharp" class='sparkles'></ion-icon></h2>
+                    <div class="card card-body">
+                        <form action="{{url_for('add_crossword')}}" method="POST">
+                            <div class="form-group big-size">
+                                <input type="text" class="form-control" name="question" placeholder="Enter Your Question" required>
+                            </div>
+                            <div class="form-group medium-size">
+                                <input type="text" class="form-control" name="answer" placeholder="Enter Your Answer" required>
+                            </div>
+                            <div class="form-group small-size">
+                                <button class="btn btn-primary btn-block save bt-inline">
+                                    Add &plus;
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+
+                    <h2 class='animate__animated animate__fadeInUp animate__delay-3s'>Preview of Questions</h2>
+                    <p>You can still update or delete the Question and Answers.</p>
+                    
+                    <table id="example" class="table table-crossword" style="width:100%">
+                        
+                        <thead>
+                            <tr class='table-row'>
+                                <td class='t-row'>Questions</td>
+                                <td class='t-row'>Answers</td>
+                                <td class='t-row'>Action</td>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            {% for data in crossword %}
+                                <tr class='data'>
+                                    <td>{{data.question}}</td>
+                                    <td class='center'>{{data.answer}}</td>
+                                    <td width="130" class='center' align="center">
+                                    <a href="/delete/{{data.id}}" class="btn btn-danger btn-delete btn-sm"  >Delete</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <a href="/retrieve"><input type="submit" value="Generate Crossword" class="generate-button"></a>
+                
+            </div>
+    </div>
+
+ 
+{% endblock %}

@@ -1,0 +1,120 @@
+<!-- This is 'index.html' : It is the main .html file of the project -->
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="form-crossword">
+
+        <a href="/"><input type="submit" value="Back to Home" class="generate-button back"></a>
+        
+        <a href="/pdfdownload"><input type="submit" value="Download as PDF" class="generate-button download"></a>
+
+        <!-- After Clicking on Generate CrossWord -->
+        <h2 class="crossword-heading animate__animated animate__zoomIn"> 
+            <ion-icon name="sparkles-sharp" class="sparkles"></ion-icon> 
+             Your Cross Word is Ready  
+             <ion-icon name="sparkles-sharp"class="sparkles"></ion-icon>
+        </h2>
+
+        <!-- Before Clicking on Generate CrossWord
+        <h2 class="crossword-heading"> 
+            <ion-icon name="sparkles-sharp" class="sparkles"></ion-icon> 
+             Your Cross Word Will Appear Here &dArr; <ion-icon name="sparkles-sharp"class="sparkles"></ion-icon>
+        </h2> -->
+
+        <table class="crossword">
+
+
+
+        {% for d in new_data %}
+        <tr>
+              {% set i = loop.index %}  
+                {% for x in d %}
+                    {% if x != 0%}
+                    {% set j = loop.index %}
+                        <td class="td-crossword">
+                            {% if num_labels[i-1][j-1] != 0 %}
+                                    <small>{{num_labels[i-1][j-1]}}</small>
+                            {% endif %}
+                            <!--{{x}}-->
+                        </td>
+                    {% else %}
+                        <td class="td-bg-new td-crossword"></td>
+                    {% endif %}
+                {% endfor %}
+        </tr>
+        {% endfor %}
+    
+        </table>
+
+        <div class="clues">
+
+            <h2 class="crossword-heading animate__animated animate__zoomIn"> 
+                <ion-icon name="bulb-sharp" class="sparkles"></ion-icon>
+                 Clues 
+                 <ion-icon name="bulb-sharp" class="sparkles"></ion-icon>
+            </h2>
+            
+            <div class="across">
+
+                <h3 class='clue-across'>Across <ion-icon name="arrow-forward-circle-sharp" class="sparkles"></ion-icon> </h3>
+                <table>
+                    <ol>
+                        {% for i in across_questions %}
+                        <tr>
+                            <td><li class='clue' align="right">{{ ac_qn[ loop.index-1 ]}}</li></td>
+                            <td><li class='clue'>{{i}}</li></td>
+                        </tr>
+                        {% endfor %}
+               </ol>
+               </table> 
+            </div>
+
+            <div class="down">
+                <h3 class='clue-down'>Down <ion-icon name="arrow-down-circle-sharp" class="sparkles"></ion-icon></h3>
+                <table>
+                    <ol>
+                        {% for i in down_questions %}
+                        <tr>
+                            <td><li class='clue' align="right">{{ dn_qn[ loop.index-1 ]}}</li></td>
+                            <td><li class='clue'>{{i}}</li></td>
+                        </tr>
+                        {% endfor %}
+               </ol>
+               </table> 
+            </div>
+            
+        </div>
+         
+        <h2 class="crossword-heading animate__animated animate__zoomIn"> 
+            <ion-icon name="key" class="sparkles"></ion-icon>
+             Answer Key
+             <ion-icon name="key" class="sparkles"></ion-icon>
+        </h2>
+
+         <table class="crossword">
+            {% for d in new_data %}
+            <tr>
+                  {% set i = loop.index %}  
+                    {% for x in d %}
+                        {% if x != 0%}
+                        {% set j = loop.index %}
+                            <td class="td-crossword">
+                                {% if num_labels[i-1][j-1] != 0 %}
+                                        <small>{{num_labels[i-1][j-1]}}</small>
+                                {% endif %}
+                                {{x}}
+                            </td>
+                        {% else %}
+                            <td class="td-bg-new td-crossword"></td>
+                        {% endif %}
+                    {% endfor %}
+            </tr>
+            {% endfor %}
+        
+            </table>
+
+    </div>
+ 
+{% endblock %}
