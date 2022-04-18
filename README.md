@@ -19,7 +19,7 @@ The Crossword puzzle is universal for any faculty / instructor irrespective of a
 1. Fork the repository
 2. Clone the reposiory
 ```
-git clone 
+git clone https://github.com/Siddhesh25082001/Crossword-Generator.git
 ```
 
 ## Installation
