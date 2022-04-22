@@ -1,7 +1,7 @@
 ## Crossword-Generator
 
-**Crossword Generator** is a web application which attempts to gamify the education sector by having a web-based crossword-puzzle-maker
-The Crossword puzzle is universal for any faculty / instructor irrespective of any standard / school / board to use 
+- **Crossword Generator** is a web application which attempts to gamify the education sector by having a web-based crossword-puzzle-maker
+- The Crossword puzzle is universal for any faculty / instructor irrespective of any standard / school / board to use 
 
 ---
 
